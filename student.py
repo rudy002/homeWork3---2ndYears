@@ -52,8 +52,5 @@ class Student:
         flag.setGrade(course_check.Grade)
         self.ListCourse.append(flag)
 
-    def Average(self):
-        return sum(self.ListCourse[0].Grade) / int(len(self.ListCourse[1].Grade))
-
     def __repr__(self):
         return f'STUDENT : {self.Surname} NUMBER ID :{self.__ID} {self.ListCourse}'

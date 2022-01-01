@@ -41,12 +41,13 @@ print(list_student)
 
 search = []
 while True:
-    search.clear()
     answer = input("choose answer please\n1- average one Student\n2- average one Course\n3- average all Student\n4- "
                    "Exit")
     if int(answer) == 1:
         search = input("enter the name of the student you want check her Average")
-        
+        only_one_student = next((x for x in list_student if x.Surname == search), None)
+        print((sum(list(map(lambda x: x.GetGrade(), only_one_student.ListCourse)))) / len((list(map(lambda x: x.GetGrade(), only_one_student.ListCourse)))))
+
     elif int(answer) == 2:
         pass
     elif int(answer) == 3:
